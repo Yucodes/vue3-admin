@@ -4,6 +4,14 @@ function resolve(dir) {
 }
 
 module.exports = {
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'https://api.imooc-admin.lgdsunday.club/',
+        changeOrigin: true
+      }
+    }
+  },
   chainWebpack(config) {
     // 设置 svg-sprite-loader
     config.module
