@@ -3,11 +3,14 @@ import store from '@/store'
 
 const whiteList = ['/login']
 
-router.beforeEach((to, form, next) => {
+router.beforeEach(async (to, form, next) => {
   if (store.getters.token) {
     if (to.path === '/login') {
       next('/')
     } else {
+      if (!store.getters.hasUserInfo) {
+        await store.dispatch('user/getUserInfo')
+      }
       next()
     }
   } else {

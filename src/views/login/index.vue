@@ -98,7 +98,7 @@ const handlerLogin = () => {
     loading.value = true
     store
       .dispatch('user/login', loginForm.value)
-      .then((data) => {
+      .then(() => {
         // console.log('ddd', data)
       })
       .catch((err) => {
