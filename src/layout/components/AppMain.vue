@@ -1,5 +1,7 @@
 <template>
-  <div class="app-main">主要区域</div>
+  <div class="app-main">
+    <router-view></router-view>
+  </div>
 </template>
 
 <script setup>
