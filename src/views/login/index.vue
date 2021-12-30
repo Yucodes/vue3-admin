@@ -7,7 +7,7 @@
       :roles="loginRules"
     >
       <div class="title-container">
-        <h3 class="title">用户登录</h3>
+        <h3 class="title">{{ $t('msg.login.title') }}</h3>
       </div>
 
       <el-form-item prop="username">
@@ -47,13 +47,15 @@
         style="width: 100%; margin-bottom: 30px"
         :loading="loading"
         @click="handlerLogin"
-        >登录</el-button
+        >{{ $t('msg.login.loginBtn') }}</el-button
       >
+      <div class="tips" v-html="$t('msg.login.desc')"></div>
     </el-form>
   </div>
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
 import { ref } from 'vue'
 import { validatePassword } from './rules'
 import { useStore } from 'vuex'
@@ -63,12 +65,13 @@ const loginForm = ref({
   password: '123456'
 })
 
+const i18n = useI18n()
 const loginRules = ref({
   username: [
     {
       required: true,
       trigger: 'blur',
-      message: '用户名为必填项'
+      message: i18n.t('msg.login.usernameRule')
     }
   ],
   password: [
@@ -153,6 +156,11 @@ $cursor: #fff;
         height: 47px;
         caret-color: $cursor;
       }
+    }
+    .tips {
+      font-size: 16px;
+      color: #fff;
+      line-height: 24px;
     }
   }
 
