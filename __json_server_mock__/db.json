@@ -1,0 +1,36 @@
+{
+  "users": [
+    {
+      "name": "jack",
+      "id": 1
+    }
+  ],
+  "sys":[
+    {
+      "id":"login",
+      "code": 200,
+      "data": {
+        "token": "d8ee9b05-9b59-4f2c-83d7-8c69a0bd6fca"
+      },
+      "message": "登录成功",
+      "success": true      
+    },
+    {
+      "id":"profile",
+      "code": 200,
+      "data":{
+        "avatar": "https://m.imooc.com/static/wap/static/common/img/logo-small@2x.png",
+        "id": "612710a9ec87aa543c9c3420",
+        "permission": {
+          "menus": ["userManage", "roleList", "permissionList", "articleRanking", "articleCreate"],
+          "points": ["distributeRole", "importUser", "removeUser", "distributePermission"]
+        },
+        "role": [{"id": "1", "title": "超级管理员"}],
+        "username": "super-admin",
+        "_id": "61e5cac0c47fbe23ece44fe6"
+      },
+      "message": "获取资料成功",
+      "success": true
+    }
+  ]  
+}

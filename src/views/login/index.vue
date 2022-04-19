@@ -146,15 +146,19 @@ $cursor: #fff;
       height: 47px;
       width: 85%;
 
-      input {
-        background: transparent;
-        border: 0px;
-        -webkit-appearance: none;
-        border-radius: 0px;
-        padding: 12px 5px 12px 15px;
-        color: $light_gray;
-        height: 47px;
-        caret-color: $cursor;
+      .el-input__wrapper {
+        background: none;
+        box-shadow: none;
+        input {
+          background: transparent;
+          border: 0px;
+          -webkit-appearance: none;
+          border-radius: 0px;
+          padding: 12px 5px 12px 15px;
+          color: $light_gray;
+          height: 47px;
+          caret-color: $cursor;
+        }
       }
     }
     .tips {

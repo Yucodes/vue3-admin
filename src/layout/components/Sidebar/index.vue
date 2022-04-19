@@ -26,6 +26,9 @@ const logoHeight = 44
   display: flex;
   align-items: center;
   justify-content: center;
+  ::v-deep .el-avatar {
+    background: none;
+  }
   .logo-title {
     margin-left: 10px;
     color: #fff;

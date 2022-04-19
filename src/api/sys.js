@@ -5,8 +5,8 @@ import request from '@/utils/request'
 */
 export const login = data => {
   return request({
-    url: 'sys/login',
-    method: 'POST',
+    url: '/sys/login',
+    method: 'GET',
     data
   })
 }
@@ -16,6 +16,7 @@ export const login = data => {
  */
 export const getUserInfo = () => {
   return request({
-    url: '/sys/profile'
+    url: '/sys/profile',
+    method: 'GET'
   })
 }
